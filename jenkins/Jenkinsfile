@@ -38,13 +38,14 @@ pipeline {
      }
     
   
-     stage("Contrast Check") {
-    	steps{
-    	    script{
-				contrastVerification applicationId: '6b5866dc-4efa-46b7-af8d-8b42ab8b8c0c', count: 1, profile: 'local', queryBy: 3, rule: 'cache-controls-missing', severity: 'High'   	    
-				}
-    	}
-      }  
+     //stage("Contrast Check") {
+    //	steps{
+   // 	    script{
+	 // 			contrastVerification applicationId: '6b5866dc-4efa-46b7-af8d-8b42ab8b8c0c', 
+		 // 			count: 1, profile: 'local', queryBy: 3, rule: 'cache-controls-missing', severity: 'High'   	    
+		 // 		}
+    //	}
+    //  }  
   
         stage('Test') {
             steps {
